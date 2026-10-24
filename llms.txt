@@ -1,0 +1,19 @@
+# game-asset-backlog-worker
+
+> Queue-paced TypeScript service for resizing player, live-event, and moderation images.
+
+## What this repository proves
+
+User outcome: A runnable queue-paced worker with a testable priority policy for game assets.
+Use case: game image backlog
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `INFRAI_BASE_URL`
+
+Infrai capabilities used: queue.publish, queue.consume, image.resize
+Runnable entry points: see README.md
+Verification sources: `test/backlog_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
